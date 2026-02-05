@@ -9,7 +9,7 @@ y="\e[33m"
 B="\e[34m"
 N="\e[0m" #Normal
 
-echo "script started and executed at : $(date)" | tee -e $LOGS_FILE
+echo "script started and executed at : $(date)" | tee -a $LOGS_FILE
 
  mkdir -p $LOGS_FOLDER
 
