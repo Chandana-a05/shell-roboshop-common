@@ -8,8 +8,9 @@ G="\e[32m"
 y="\e[33m"
 B="\e[34m"
 N="\e[0m" #Normal
+START_TIME=$(date +%s)
 
-echo "script started and executed at : $(date)" | tee -a $LOGS_FILE
+echo -e "$(date "+%Y %M %D %H: %M: %S") script started and executed at : $(date)" | tee -a $LOGS_FILE
 
  mkdir -p $LOGS_FOLDER
 
@@ -29,3 +30,12 @@ echo "script started and executed at : $(date)" | tee -a $LOGS_FILE
                 echo -e "$(date "+%Y %M %D %H: %M: %S") | $2 ... $G SUCCESS $N" | tee -a $LOGS_FILE
             fi
         }
+
+print_total_time(){
+    END_TIME=$(data, +%s)
+    TOTAL_TIME=$(($END_TIME - $START_TIME))
+    echo -e "$(date "+%Y %M %D %H: %M: %S") | script executed in : $G TOTAL_TIME seconds $N" 
+
+
+
+} 
