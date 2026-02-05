@@ -32,10 +32,10 @@ echo -e "$(date "+%Y %M %D %H: %M: %S") script started and executed at : $(date)
         }
 
 print_total_time(){
-    END_TIME=$(date, +%s)
+    END_TIME=$(date +%s)
     TOTAL_TIME=$(($END_TIME - $START_TIME))
     echo -e "$(date "+%Y %M %D %H: %M: %S") | script executed in : $G $TOTAL_TIME seconds $N" 
 
 
 
-} 
+}   
